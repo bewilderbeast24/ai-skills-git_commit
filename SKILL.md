@@ -54,4 +54,4 @@ Present final changes, log successful commits, or list validation failures.
 - **Template Adherence**: All output must match the `<type>(<header>) -> <author>: <desc>` format.
 
 ## Additional Instructions
-None
+All temporary scripts generated while execution of skills (scripts which will be deleted after execution) will be written in `.gemini/skills-diary/temp-scripts/<timestamp>/` as directory
