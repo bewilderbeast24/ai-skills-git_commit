@@ -1,0 +1,4 @@
+- [ ] Mode Selection
+- [ ] Context Setup
+- [ ] Execute Mode
+- [ ] Outcome / Handover
