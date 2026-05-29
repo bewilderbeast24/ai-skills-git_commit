@@ -1,4 +1,4 @@
-# Step: 06-outcome
+# Step: 04-outcome
 
 ## Description
 Finalize the git-commit operation, report the summarized results, and handover to the user.
