@@ -1,4 +1,4 @@
-# Step: 04-validation-workflow
+# Step: 03b-validation-workflow
 
 ## Description
 Audit existing commit messages in the repository to ensure template compliance.
@@ -15,12 +15,14 @@ Audit existing commit messages in the repository to ensure template compliance.
 ## Workflow
 ### Process
 - **Fetch Commits**: Retrieve the target commits.
-- **Match Template**: Check if each message matches the regex: `^(\w+)\(([^)]+)\) -> (\w+): (.+)$`
+- **Match Template**: Check if each message matches the regex: `^\[([^:]+):([^\]]+)\] (\w+)\(([^)]+)\) -> (\w+): (.+)$`
 - **Verify Placeholders**:
-  - `<type>`: Must be a recognized type.
-  - `<header>`: Must be a brief phrase.
-  - `<author>`: Must be one of `human`, `codex`, `claude`, `gemini`, `agent`.
-  - `<desc>`: Must be within length limits.
+  - `CONTEXT`: Must be a recognized context.
+  - `VERSION`: Must be a recognized version.
+  - `type`: Must be a recognized type.
+  - `scope`: Must be a brief phrase.
+  - `author`: Must be one of `human`, `codex`, `claude`, `gemini`, `agent`, or a recognized author.
+  - `description`: Must be within length limits.
 - **Report Results**:
   - Valid commits.
   - Invalid commits, highlighting the violation reason.
