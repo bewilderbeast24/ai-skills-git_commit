@@ -37,4 +37,4 @@ Update `.agents/skills-diary/git-commit/[<instance-name>]/checklist.md` by marki
 ### Human in the Loop (HITL)
 - Confirm context is correct with the user before proceeding to execution if requested, otherwise proceed to the mode-specific execution step.
 ### Auto pilot
-- Automatically transition to [03a-writing-workflow.md](03a-writing-workflow.md), [03b-validation-workflow.md](03b-validation-workflow.md), or [03v-rewriting-workflow.md](03c-rewriting-workflow.md) depending on the selected mode.
+- Automatically transition to [03a-writing-workflow.md](03a-writing-workflow.md), [03b-validation-workflow.md](03b-validation-workflow.md), or [03c-rewriting-workflow.md](03c-rewriting-workflow.md) depending on the selected mode.
