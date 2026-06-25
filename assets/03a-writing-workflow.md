@@ -18,11 +18,12 @@ Execute the "one file per commit" logic with structured messages for files stage
   - **Unstage All**: `git reset` (to ensure control over the index).
   - **Stage Single File**: `git add <file-path>`.
   - **Analyze Change**:
-    - Determine `<type-of-addition>` (e.g., feat, docs, tests, fix, refactor).
-    - Determine `<one-phrase-header-for-addition>` (e.g., "UI Button", "User Auth").
-    - Draft `<one-line-description-for-addition>` (max 2 lines).
+    - Use identified `CONTEXT` and `VERSION`.
+    - Determine `type` (e.g., feat, docs, tests, fix, refactor, deprecate, branch).
+    - Determine `scope` (e.g., "UI Button", "User Auth").
+    - Draft `description` (max 2 lines).
   - **Construct Message**:
-    - Template: `"<type-of-addition>(<one-phrase-header-for-addition>) -> <author>: <one-line-description-for-addition>"`
+    - Template: `"[CONTEXT:VERSION] type(scope) -> author: description"`
   - **Verify Against Requirements**:
     - Only 1 file staged? Yes.
     - Author correct? Yes.

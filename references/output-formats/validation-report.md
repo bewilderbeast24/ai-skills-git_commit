@@ -19,4 +19,4 @@
 
 ## Recommendations
 - [ ] Run `Rewrite` mode to fix invalid commits.
-- [ ] Ensure future commits follow the `[<TAG>:<VERSION>] type(header) -> author: desc` format.
+- [ ] Ensure future commits follow the `[CONTEXT:VERSION] type(scope) -> author: description` format.

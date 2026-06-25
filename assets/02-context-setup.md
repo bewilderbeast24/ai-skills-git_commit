@@ -5,6 +5,7 @@ Gather necessary information from the repository and environment based on the se
 
 ## Purpose
 - Retrieve current staged files and author information.
+- Identify the current project `CONTEXT` and `VERSION`.
 - Fetch commit history if validating or rewriting.
 - Load the specific style guide rules.
 
@@ -16,6 +17,9 @@ Gather necessary information from the repository and environment based on the se
 ### Process
 - **Data Collection**:
   - **Author Identification**: Check if a specific author name was mentioned (`human`, `codex`, `claude`, `gemini`). Default is `agent`.
+  - **Context & Version Identification**: 
+    - Attempt to infer `CONTEXT` and `VERSION` from recent git logs (e.g., `git log -n 5 --pretty=format:"%s"`).
+    - If unable to infer or if this is a new phase, use `ask_user` to prompt for `CONTEXT` (e.g., `FEATURE-X`) and `VERSION` (e.g., `1.2`).
   - **Commit History**: If Mode is Validate/Rewrite, identify the range of commits to inspect (e.g., `git log -n 5 --pretty=format:"%h %s"`).
   - Load `references/style-guide.md` for template details.
 - **Constraints Application**:
@@ -23,7 +27,7 @@ Gather necessary information from the repository and environment based on the se
   - Inform user about "One File per Commit" constraint if in Write mode.
 
 ### Output Format
-- Context dictionary loaded in agent memory.
+- Context dictionary loaded in agent memory (including `CONTEXT` and `VERSION`).
 
 ## Post-stage Checkpoint
 ### Progress Tracking

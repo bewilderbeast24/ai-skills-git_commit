@@ -1,4 +1,4 @@
-# Step: 05-rewriting-workflow
+# Step: 03c-rewriting-workflow
 
 ## Description
 Correct existing invalid commit messages to strictly match the required template format.
@@ -17,7 +17,7 @@ Correct existing invalid commit messages to strictly match the required template
 - **Identify Target Commits**: Load commits from Validation Mode or user specification.
 - **Determine New Message**:
   - Analyze the file changes via `git show --name-only <hash>`.
-  - Draft a new message: `"<type>(<header>) -> <author>: <desc>"`
+  - Draft a new message: `"[CONTEXT:VERSION] type(scope) -> author: description"`
 - **Apply Changes**:
   - For the most recent commit: Formulate `git commit --amend -m "<new-message>"`.
   - For older commits: Formulate an interactive rebase (`git rebase -i`) using `reword`.
